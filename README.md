@@ -1,4 +1,5 @@
-# Udacity Project 3 : Deployment
+# Udacity Deployment project
+
 ## Udagram
 
 This application is provided to you as an alternative starter project.The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
@@ -275,5 +276,6 @@ commands used in terminal :
 
 
 
-#   U d a g r a m  
+#   U d a g r a m 
+ 
  
