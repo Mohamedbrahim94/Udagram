@@ -1,11 +1,8 @@
-# Udacity Deployment project
-
-## Udagram
+# Udacity Deployment project Udagram
 
 This application is provided to you as an alternative starter project.The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
 
 ## Getting Started
->> steps
 1. I have uploaded this project from my local machine to my Github repo udacity `https://github.com/Mohamedbrahim94/udagram` .
 2. using git commands to add my updated codes.
 3. Moving to my psql terminal creating my database `udagram` and connected my application to my database locally and ensure with postbird that is connected successfully locally and on AWS RDS.
@@ -23,7 +20,7 @@ This application is provided to you as an alternative starter project.The udagra
 
 - AWS CLI v2, aws-cli/2.4.21 python/3.8.8 windows/10 exe/AMD64 prompt/off
 
-## Testing
+### Testing
 
 This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
 
@@ -48,7 +45,7 @@ The e2e tests are using Protractor and Jasmine.
 - [Express](https://expressjs.com/) - Javascript API Framework
 
 ### Architecture Diagram 
->> I have created a diagram using `lucidchart` to show an overview of my application infrastructure to be deployed
+ I have created a diagram using `lucidchart` to show an overview of my application infrastructure to be deployed
 this diagram will found at Screenshots `Docs` in the root directory. `docs\Architecture diagram.png`
 
 ### Installation
@@ -57,7 +54,7 @@ Provision the necessary AWS services needed for running the application:
 >>RDS ENDPOINT : `udagram-1.cv6dxmbvcdcf.us-east-1.rds.amazonaws.com`
 
 2. In AWS, provision a s3 bucket for hosting the uploaded files. 
->> S3 endpoint `http://udagrambucketpj3.s3-website-us-east-1.amazonaws.com`
+ S3 endpoint `http://udagrambucketpj3.s3-website-us-east-1.amazonaws.com`
 
 3. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
 
@@ -69,15 +66,15 @@ Provision the necessary AWS services needed for running the application:
 
 7. elasticbean app health check : `docs\ElasticBeanStalk\Udagram-env - health.png`
 
-# Automation deployment:
-## FrontEnd locally
+### Automation deployment:
+#### FrontEnd locally
   
   1. Build script is added to package.json and run command with : `npm run build`.
   2. www directory containing `index.html` which is static host file which will be uploaded to AWS S3 bucket.
   3. Creating `bin` directory add a `deploy.sh` file which have `automated script` to deploy frontend build to AWS S3 bucket `udagrambucketpj3`
   4. Adding deploy script to package.json used automation to deploy frontend which read command from `bin/deploy.sh` file.  
 
-## Backend locally
+#### Backend locally
 
   1. build script is added to package.json run with command `npm run build` which will create a `www` directory including `Archive.zip` file
   which will the file to be uploaded to AWS elasticbeanstalk to deploy udagram application api.
@@ -85,7 +82,7 @@ Provision the necessary AWS services needed for running the application:
   4. adding deploy script in package.json used automation command to deploy backend to `elasticbeanstalk` with `env-settings` in `bin/deploy.sh` file.
   5. `.env` file has been created adding environment variables in it.
     
-    >> add the following environments variables in `.env` file 
+    add the following environments variables in `.env` file 
 ``
 POSTGRES_HOST=udagram-1.cv6dxmbvcdcf.us-east-1.rds.amazonaws.com  >> `RDS endpoint/host`
 BD_PORT=5432
@@ -104,8 +101,8 @@ JWT_SECRET=me-mohibrahim-secret
 
 ``
 
-## Screenshots provided
->> Please check Screenshoot directory `/docs` in the root directory which includes : 
+### Screenshots provided
+ Please check Screenshoot directory `/docs` in the root directory which includes : 
 
 1. docs\Architecture Diagram : Application infrastructure diagram 
 2. docs\CircleCi : includes last build of my circleci which has been succeded.
@@ -115,7 +112,7 @@ JWT_SECRET=me-mohibrahim-secret
 6. docs\S3 : steps for creating S3 bucket for my application.
 7. docs\Terminal : shows some commands used in my terminal regarding versions , configuring AWS and deploying app using elasticbeanstalk. 
 
-## Endpoints
+### Endpoints
   1. API Host/Endpoint link : `http://udagram-env.eba-dtvs3jet.us-east-1.elasticbeanstalk.com` 
       There's a screenshot of the api host founds in `docs` directory  :
       `docs\ElasticBeanStalk\Elasticbean host .png`
@@ -126,9 +123,9 @@ JWT_SECRET=me-mohibrahim-secret
 
   3. AWS RDS endpoint : `udagram-1.cv6dxmbvcdcf.us-east-1.rds.amazonaws.com`.
 
->> Automated EB Cli documentation will be found below in the `elasticbeanstalk` section.
+ Automated EB Cli documentation will be found below in the `elasticbeanstalk` section.
 
-# Manual deployment to Amazon web services (AWS): 
+### Manual deployment to Amazon web services (AWS): 
 
 1. Launch AWS console provided
 2. Creating a user using `AWS IAM`. 
@@ -136,8 +133,8 @@ JWT_SECRET=me-mohibrahim-secret
 4. Creating a simple storage bucket using `AWS S3`
 5. Creating elasticbeanstalk app `udagram` with `Udagram-env`
 
-## AWS IAM 
->> created a user and gives it `FullAdministatorAccess`
+#### AWS IAM 
+ created a user and gives it `FullAdministatorAccess`
 - for all steps details please check : `docs\IAM`
 1. Account ID: 1112-1773-7540
 2. username : mohamed-pj3
@@ -145,8 +142,8 @@ JWT_SECRET=me-mohibrahim-secret
 4. USER ACCESS SECRET ID : 09tqPvmcMic7/dX2BLb6b8NftBL46PL7UBTDFO4q
  
 
-## AWS RDS 
->> Created a `udagram-1` database for my application with RDS Master username `postgres` and Master Password `H2Tw5xtZj52tsyUOuLax`
+#### AWS RDS 
+ Created a `udagram-1` database for my application with RDS Master username `postgres` and Master Password `H2Tw5xtZj52tsyUOuLax`
 
 - AWS RDS endpoint : `udagram-1.cv6dxmbvcdcf.us-east-1.rds.amazonaws.com`
 - in my `.env` file set :
@@ -154,21 +151,21 @@ JWT_SECRET=me-mohibrahim-secret
    DB_PORT=`5432`  
 - for all steps details please check : `docs\RDS`
 
->> After creating a IAM user and give it all admin access sign in to AWS console with :
+ After creating a IAM user and give it all admin access sign in to AWS console with :
 1. Account ID: 1112-1773-7540
 2. username : mohamed-pj3
 3. USER ACCESS ID KEY : AKIARTZIX75CISTXCMYJ
 4. USER ACCESS SECRET ID : 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
 
 
-## AWS S3 
+#### AWS S3 
 >> created a simple storage bucket named `udagrambucketpj3` for my application 
 1. setting  my `AWS S3 Bucket Policy ` in permission section.
 2. used it in my `frontend/bin/deploy.sh` file for uploading app build from `www` directory to my `AWS S3 bucket ` udagrambucketpj3   
 3. S3 host : `http://udagrambucketpj3.s3-website-us-east-1.amazonaws.com`
 - for all steps details please check : `docs\S3`
 
-## ElasticbeanStalk 
+#### ElasticbeanStalk 
 >> created an app named `udagram` with environment `Udagram-env` using `AWS Elasticbean`
 1. setting my application name and choose platform and version `Node.js 14 running on 64bit Amazon Linux 2`
 2. Navigating to environment configurations and adding my environment variables 
@@ -217,13 +214,13 @@ JWT_SECRET=me-mohibrahim-secret
 1. `docs\Terminal\aws configurations terminal.png`
 2. `docs\ElasticBeanStalk\eb commands in terminal.png`
 3. `docs\ElasticBeanStalk\eb creating sample app.png`
-###  set up AWS security access for CircleCI
+####  set up AWS security access for CircleCI
 
 1. navigate back to the AWS management console and select Identity and Access Management
 2. select Users in the left menu bar, then click on add user
 3. enter any name you want and check the "programatic access" checkbox
 
-### set up AWS security access for CircleCI
+#### set up AWS security access for CircleCI
 1. Navigate back to your Circle CI page and select the organization with your project then click on the settings icon on the left. Click on the context option then "create context".
 2. I am choosing the name aws to match the context specified in my .circleci/config.yml file in the workflows section.
 3. Click on the newly created context and add two new variables.
@@ -232,7 +229,7 @@ AWS_SECRET_ACCESS_KEY
 4. Enter in the value of these variables from the credentials.csv file downloaded in the previous step.
 
 
-## Continuous integration and Pipeline using `Circleci`:
+#### Continuous integration and Pipeline using `Circleci`:
  1. Creating package.json file in the root directory adding automated scripts for continuous integration to Circleci
  2. Creating `.circleci` directory containing `config.yml` file adding in it `circleci configuations` for `CI/CD` 
  3. Navigating to `CircleCi dashboard` after connecting it to my `Github`.
@@ -240,12 +237,12 @@ AWS_SECRET_ACCESS_KEY
  5. Navigating to project setting and adding my environments variables for `AWS` as shown in `docs\CircleCi\Circleci Environment Variables - udagram -.png`and ``
  6. Circleci last build check : `docs\CircleCi\Pipelines -Last_build_udagram -.png`
 
- ## Package.Json
+ #### Package.Json
  1. Angular/cli is added as devdependencies 
 - All steps are shown in [Screenshots\CircleCi] 
 2. scripts for CI/CD is added 
 
-## aws configure 
+#### aws configure 
 - please check : `docs\Terminal\aws configurations terminal.png` 
 commands used in terminal : 
 `aws configure` >> 
@@ -255,15 +252,15 @@ commands used in terminal :
 4. Default output format [json]: json
 
 
-## Documentations used : 
+#### Documentations used : 
 
-### AWS CLI
+#### AWS CLI
 [AWS CLI DOCS](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 #### Configure AWS CLI
 [DOCS](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-### EB CLI
+#### EB CLI
 
 ####  Installation
   - [EB CLI Windows](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-windows.html)
@@ -274,8 +271,3 @@ commands used in terminal :
 
 [Setting configuration EB] (https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-configuration-methods-before.html)
 
-
-
-#   U d a g r a m 
- 
- 
