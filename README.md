@@ -87,7 +87,7 @@ Provision the necessary AWS services needed for running the application:
 POSTGRES_HOST=udagram-1.cv6dxmbvcdcf.us-east-1.rds.amazonaws.com  >> `RDS endpoint/host`
 BD_PORT=5432
 PORT=3000
-POSTGRES_PASSWORD=H2Tw5xtZj52tsyUOuLax
+POSTGRES_PASSWORD=******************
 POSTGRES_USERNAME=postgres
 RDS_DIALECT=postgres
 POSTGRES_DB=postgres
@@ -95,8 +95,8 @@ AWS_REGION=us-east-1
 AWS_PROFILE=default
 AWS_BUCKET=udagrambucketpj3
 URL=http://localhost
-AWS_ACCESS_KEY_ID=AKIARTZIX75CISTXCMYJ
-AWS_SECRET_ACCESS_KEY=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
+AWS_ACCESS_KEY_ID=AKI*****************
+AWS_SECRET_ACCESS_KEY=*********************
 JWT_SECRET=me-mohibrahim-secret
 
 ``
@@ -138,12 +138,12 @@ JWT_SECRET=me-mohibrahim-secret
 - for all steps details please check : `docs\IAM`
 1. Account ID: 1112-1773-7540
 2. username : mohamed-pj3
-3. USER ACCESS ID KEY : AKIARTZIX75CISTXCMYJ
-4. USER ACCESS SECRET ID : 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
+3. USER ACCESS ID KEY : AKIARTZ*********
+4. USER ACCESS SECRET ID : 09tqPvmc**************
  
 
 #### AWS RDS 
- Created a `udagram-1` database for my application with RDS Master username `postgres` and Master Password `H2Tw5xtZj52tsyUOuLax`
+ Created a `udagram-1` database for my application with RDS Master username `postgres` and Master Password `H2Tw5*********`
 
 - AWS RDS endpoint : `udagram-1.cv6dxmbvcdcf.us-east-1.rds.amazonaws.com`
 - in my `.env` file set :
@@ -154,8 +154,8 @@ JWT_SECRET=me-mohibrahim-secret
  After creating a IAM user and give it all admin access sign in to AWS console with :
 1. Account ID: 1112-1773-7540
 2. username : mohamed-pj3
-3. USER ACCESS ID KEY : AKIARTZIX75CISTXCMYJ
-4. USER ACCESS SECRET ID : 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
+3. USER ACCESS ID KEY : AKIART********
+4. USER ACCESS SECRET ID : 09tqPvmcM*************
 
 
 #### AWS S3 
